@@ -1,0 +1,4 @@
+CREATE DATABASE SuperStoreDB;
+
+USE SuperStoreDB
+GO

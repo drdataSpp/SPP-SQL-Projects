@@ -1,0 +1,8 @@
+USE SuperStoreDB;
+
+DROP TABLE IF EXISTS DimCategory_T; 
+
+CREATE TABLE DimCategory_T(
+	CategoryID INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
+	Category_Name VARCHAR(255) NOT NULL
+);

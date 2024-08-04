@@ -1,0 +1,29 @@
+USE SuperStoreDB;
+
+DROP TABLE IF EXISTS FactSales_T; 
+
+CREATE TABLE FactSales_T(
+	SaleID 			INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
+	OrderID 		VARCHAR(255) NOT NULL,
+	OrderDate 		INT NOT NULL,
+	ShipDate 		INT NOT NULL,
+	ProductID 		INT NOT NULL,
+	Sales 			MONEY NOT NULL,
+	Quantity		INT NOT NULL,
+	Discount 		FLOAT NOT NULL,
+	Profit			FLOAT NOT NULL,
+	Shipping_Cost	MONEY NOT NULL,
+	ShipModeID		INT NOT NULL,
+	CustomerID 		INT NOT NULL,
+	SegmentID 		INT NOT NULL,
+	StateID			INT NOT NULL,
+	MarketID		INT NOT NULL,
+	OrderPriorityID INT NOT NULL
+	CONSTRAINT FK_ShipMode FOREIGN KEY (ShipModeID) REFERENCES DimShipMode_T(ShipModeID),
+	CONSTRAINT FK_Customer FOREIGN KEY (CustomerID) REFERENCES DimCustomer_T(CustomerID),
+	CONSTRAINT FK_Segment FOREIGN KEY (SegmentID) REFERENCES DimSegment_T(SegmentID),
+	CONSTRAINT FK_State FOREIGN KEY (StateID) REFERENCES DimState_T(StateID),
+	CONSTRAINT FK_Market FOREIGN KEY (MarketID) REFERENCES DimMarket_T(MarketID),
+	CONSTRAINT FK_OrderPriority FOREIGN KEY (OrderPriorityID) REFERENCES DimOrderPriority_T(OrderPriorityID),
+	CONSTRAINT FK_ProductID FOREIGN KEY (ProductID) REFERENCES DimProduct_T(ProdID)
+);

@@ -1,0 +1,1390 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="12/30/2022 11:53:49 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAPTOP-MCNKFD7O"
+  DTS:CreatorName="LAPTOP-MCNKFD7O\soory"
+  DTS:DTSID="{728E5555-23B9-4138-946D-4017FC2F112C}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LocaleID="5129"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{E349CF3E-6DE9-4A60-953E-B417A96139EB}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LAPTOP-MCNKFD7O.SuperStoreDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{C54466D2-F806-474A-AEBA-EBFF15E09FCA}"
+      DTS:ObjectName="LAPTOP-MCNKFD7O.SuperStoreDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=LAPTOP-MCNKFD7O;Initial Catalog=SuperStoreDB;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SuperStore CSV Data]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{9EF63789-1EB2-407A-9F72-4ADBDEEC01A0}"
+      DTS:ObjectName="SuperStore CSV Data">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="5129"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="D:\001_Data\SQL\archive (1)\SuperStoreOrders.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="order_id"
+              DTS:DTSID="{62B69E9A-D631-4439-97D6-4F8FA5B3AF20}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="order_date"
+              DTS:DTSID="{EC974F57-5F22-4A3A-89AB-0368B2BB1215}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ship_date"
+              DTS:DTSID="{277C4951-D1BA-4CEB-B8E5-1DC853BDB44A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ship_mode"
+              DTS:DTSID="{47D37C4A-9714-481B-AC09-77EE57D4DB06}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="customer_name"
+              DTS:DTSID="{4D3A1FDB-0C59-446C-A144-EE9C818D40B7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="segment"
+              DTS:DTSID="{E59F1B46-AC71-45A8-BB61-CF0D9DDB6EB4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="state"
+              DTS:DTSID="{1A3DD4EA-78F8-4825-AE5F-9081BE87B171}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="country"
+              DTS:DTSID="{681B916B-8027-422F-94B2-A0D78844EF06}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="market"
+              DTS:DTSID="{787A4CFD-676E-4466-ADC7-AC5BB91633BB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="region"
+              DTS:DTSID="{5D126F9F-1A14-49A7-B447-F738ECD0C288}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="product_id"
+              DTS:DTSID="{13A006CB-951B-4D3E-A61C-2374E2D58D3E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="category"
+              DTS:DTSID="{2A19791B-449C-42BD-B971-B2FEA709B26A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="sub_category"
+              DTS:DTSID="{F2EAB676-C878-44EB-AC79-2741B697DC2A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="300"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="product_name"
+              DTS:DTSID="{B68B32AB-C528-41B6-81E4-A89B4E1D236B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="sales"
+              DTS:DTSID="{6D146CC0-4E88-4D01-939C-C1A8946C43D8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="quantity"
+              DTS:DTSID="{07C09379-DA4F-4E32-A5B0-63E49D304C42}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="discount"
+              DTS:DTSID="{A38AB831-07B4-4FB5-BEAA-E4213A1FE643}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="profit"
+              DTS:DTSID="{2D633818-0983-4285-9B08-E6C78A819D93}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="shipping_cost"
+              DTS:DTSID="{11D95585-5F8D-48F3-9BA8-486BD2C22E58}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="order_priority"
+              DTS:DTSID="{99985DFD-AEAF-447C-86C5-8B0C793A2CDD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="year"
+              DTS:DTSID="{D8AFBFE4-A060-4045-809C-2D2F75865046}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Super Store ETL Pipeline"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{BF2C88A1-A192-4796-9B77-43B7CE535C4D}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Super Store ETL Pipeline"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Super Store ETL Pipeline\SQL Server Staging Table"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="SQL Server Staging Table"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Staging_SuperStoreSource_T]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">65001</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-MCNKFD7O.SuperStoreDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-MCNKFD7O.SuperStoreDB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].Columns[order_id]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="order_id"
+                      externalMetadataColumnId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[ORDER_ID]"
+                      lineageId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[order_id]" />
+                    <inputColumn
+                      refId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].Columns[order_date]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="order_date"
+                      externalMetadataColumnId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[ORDER_DATE]"
+                      lineageId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[order_date]" />
+                    <inputColumn
+                      refId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].Columns[ship_date]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ship_date"
+                      externalMetadataColumnId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[SHIP_DATE]"
+                      lineageId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[ship_date]" />
+                    <inputColumn
+                      refId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].Columns[ship_mode]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ship_mode"
+                      externalMetadataColumnId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[SHIP_MODE]"
+                      lineageId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[ship_mode]" />
+                    <inputColumn
+                      refId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].Columns[customer_name]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="customer_name"
+                      externalMetadataColumnId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[CUSTOMER_NAME]"
+                      lineageId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[customer_name]" />
+                    <inputColumn
+                      refId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].Columns[segment]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="segment"
+                      externalMetadataColumnId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[SEGMENT]"
+                      lineageId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[segment]" />
+                    <inputColumn
+                      refId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].Columns[state]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="state"
+                      externalMetadataColumnId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[STATE]"
+                      lineageId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[state]" />
+                    <inputColumn
+                      refId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].Columns[country]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="country"
+                      externalMetadataColumnId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[COUNTRY]"
+                      lineageId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[country]" />
+                    <inputColumn
+                      refId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].Columns[market]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="market"
+                      externalMetadataColumnId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[MARKET]"
+                      lineageId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[market]" />
+                    <inputColumn
+                      refId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].Columns[region]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="region"
+                      externalMetadataColumnId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[REGION]"
+                      lineageId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[region]" />
+                    <inputColumn
+                      refId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].Columns[product_id]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="product_id"
+                      externalMetadataColumnId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[PRODUCT_ID]"
+                      lineageId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[product_id]" />
+                    <inputColumn
+                      refId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].Columns[category]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="category"
+                      externalMetadataColumnId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[CATEGORY]"
+                      lineageId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[category]" />
+                    <inputColumn
+                      refId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].Columns[sub_category]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="sub_category"
+                      externalMetadataColumnId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[SUB_CATEGORY]"
+                      lineageId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[sub_category]" />
+                    <inputColumn
+                      refId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].Columns[product_name]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="300"
+                      cachedName="product_name"
+                      externalMetadataColumnId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[PRODUCT_NAME]"
+                      lineageId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[product_name]" />
+                    <inputColumn
+                      refId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].Columns[sales]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="sales"
+                      externalMetadataColumnId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[SALES]"
+                      lineageId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[sales]" />
+                    <inputColumn
+                      refId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].Columns[quantity]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="quantity"
+                      externalMetadataColumnId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[QUANTITY]"
+                      lineageId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[quantity]" />
+                    <inputColumn
+                      refId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].Columns[discount]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="discount"
+                      externalMetadataColumnId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[DISCOUNT]"
+                      lineageId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[discount]" />
+                    <inputColumn
+                      refId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].Columns[profit]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="profit"
+                      externalMetadataColumnId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[PROFIT]"
+                      lineageId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[profit]" />
+                    <inputColumn
+                      refId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].Columns[shipping_cost]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="shipping_cost"
+                      externalMetadataColumnId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[SHIPPING_COST]"
+                      lineageId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[shipping_cost]" />
+                    <inputColumn
+                      refId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].Columns[order_priority]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="order_priority"
+                      externalMetadataColumnId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[ORDER_PRIORITY]"
+                      lineageId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[order_priority]" />
+                    <inputColumn
+                      refId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].Columns[year]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="year"
+                      externalMetadataColumnId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[YEAR]"
+                      lineageId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[year]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[ROW_ID]"
+                      dataType="i4"
+                      name="ROW_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[ORDER_ID]"
+                      codePage="65001"
+                      dataType="str"
+                      length="255"
+                      name="ORDER_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[ORDER_DATE]"
+                      dataType="dbDate"
+                      name="ORDER_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[SHIP_DATE]"
+                      dataType="dbDate"
+                      name="SHIP_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[SHIP_MODE]"
+                      codePage="65001"
+                      dataType="str"
+                      length="255"
+                      name="SHIP_MODE" />
+                    <externalMetadataColumn
+                      refId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[CUSTOMER_NAME]"
+                      codePage="65001"
+                      dataType="str"
+                      length="255"
+                      name="CUSTOMER_NAME" />
+                    <externalMetadataColumn
+                      refId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[SEGMENT]"
+                      codePage="65001"
+                      dataType="str"
+                      length="255"
+                      name="SEGMENT" />
+                    <externalMetadataColumn
+                      refId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[STATE]"
+                      codePage="65001"
+                      dataType="str"
+                      length="255"
+                      name="STATE" />
+                    <externalMetadataColumn
+                      refId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[COUNTRY]"
+                      codePage="65001"
+                      dataType="str"
+                      length="255"
+                      name="COUNTRY" />
+                    <externalMetadataColumn
+                      refId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[MARKET]"
+                      codePage="65001"
+                      dataType="str"
+                      length="255"
+                      name="MARKET" />
+                    <externalMetadataColumn
+                      refId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[REGION]"
+                      codePage="65001"
+                      dataType="str"
+                      length="255"
+                      name="REGION" />
+                    <externalMetadataColumn
+                      refId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[PRODUCT_ID]"
+                      codePage="65001"
+                      dataType="str"
+                      length="255"
+                      name="PRODUCT_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[CATEGORY]"
+                      codePage="65001"
+                      dataType="str"
+                      length="255"
+                      name="CATEGORY" />
+                    <externalMetadataColumn
+                      refId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[SUB_CATEGORY]"
+                      codePage="65001"
+                      dataType="str"
+                      length="255"
+                      name="SUB_CATEGORY" />
+                    <externalMetadataColumn
+                      refId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[PRODUCT_NAME]"
+                      codePage="65001"
+                      dataType="str"
+                      length="300"
+                      name="PRODUCT_NAME" />
+                    <externalMetadataColumn
+                      refId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[SALES]"
+                      codePage="65001"
+                      dataType="str"
+                      length="255"
+                      name="SALES" />
+                    <externalMetadataColumn
+                      refId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[QUANTITY]"
+                      codePage="65001"
+                      dataType="str"
+                      length="255"
+                      name="QUANTITY" />
+                    <externalMetadataColumn
+                      refId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[DISCOUNT]"
+                      codePage="65001"
+                      dataType="str"
+                      length="255"
+                      name="DISCOUNT" />
+                    <externalMetadataColumn
+                      refId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[PROFIT]"
+                      codePage="65001"
+                      dataType="str"
+                      length="255"
+                      name="PROFIT" />
+                    <externalMetadataColumn
+                      refId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[SHIPPING_COST]"
+                      codePage="65001"
+                      dataType="str"
+                      length="255"
+                      name="SHIPPING_COST" />
+                    <externalMetadataColumn
+                      refId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[ORDER_PRIORITY]"
+                      codePage="65001"
+                      dataType="str"
+                      length="255"
+                      name="ORDER_PRIORITY" />
+                    <externalMetadataColumn
+                      refId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[YEAR]"
+                      codePage="65001"
+                      dataType="str"
+                      length="255"
+                      name="YEAR" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Super Store ETL Pipeline\SuperStore CSV Data"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="5129"
+              name="SuperStore CSV Data"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SuperStore CSV Data]"
+                  connectionManagerRefId="Package.ConnectionManagers[SuperStore CSV Data]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[order_id]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].ExternalColumns[order_id]"
+                      length="50"
+                      lineageId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[order_id]"
+                      name="order_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[order_date]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].ExternalColumns[order_date]"
+                      length="50"
+                      lineageId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[order_date]"
+                      name="order_date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[ship_date]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].ExternalColumns[ship_date]"
+                      length="50"
+                      lineageId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[ship_date]"
+                      name="ship_date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[ship_mode]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].ExternalColumns[ship_mode]"
+                      length="50"
+                      lineageId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[ship_mode]"
+                      name="ship_mode"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[customer_name]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].ExternalColumns[customer_name]"
+                      length="50"
+                      lineageId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[customer_name]"
+                      name="customer_name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[segment]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].ExternalColumns[segment]"
+                      length="50"
+                      lineageId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[segment]"
+                      name="segment"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[state]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].ExternalColumns[state]"
+                      length="50"
+                      lineageId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[state]"
+                      name="state"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[country]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].ExternalColumns[country]"
+                      length="50"
+                      lineageId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[country]"
+                      name="country"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[market]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].ExternalColumns[market]"
+                      length="50"
+                      lineageId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[market]"
+                      name="market"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[region]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].ExternalColumns[region]"
+                      length="50"
+                      lineageId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[region]"
+                      name="region"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[product_id]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].ExternalColumns[product_id]"
+                      length="50"
+                      lineageId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[product_id]"
+                      name="product_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[category]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].ExternalColumns[category]"
+                      length="50"
+                      lineageId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[category]"
+                      name="category"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[sub_category]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].ExternalColumns[sub_category]"
+                      length="50"
+                      lineageId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[sub_category]"
+                      name="sub_category"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[product_name]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].ExternalColumns[product_name]"
+                      length="300"
+                      lineageId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[product_name]"
+                      name="product_name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[sales]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].ExternalColumns[sales]"
+                      length="50"
+                      lineageId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[sales]"
+                      name="sales"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[quantity]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].ExternalColumns[quantity]"
+                      length="50"
+                      lineageId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[quantity]"
+                      name="quantity"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[discount]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].ExternalColumns[discount]"
+                      length="50"
+                      lineageId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[discount]"
+                      name="discount"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[profit]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].ExternalColumns[profit]"
+                      length="50"
+                      lineageId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[profit]"
+                      name="profit"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[shipping_cost]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].ExternalColumns[shipping_cost]"
+                      length="50"
+                      lineageId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[shipping_cost]"
+                      name="shipping_cost"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[order_priority]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].ExternalColumns[order_priority]"
+                      length="50"
+                      lineageId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[order_priority]"
+                      name="order_priority"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[year]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].ExternalColumns[year]"
+                      length="50"
+                      lineageId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].Columns[year]"
+                      name="year"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].ExternalColumns[order_id]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="order_id" />
+                    <externalMetadataColumn
+                      refId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].ExternalColumns[order_date]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="order_date" />
+                    <externalMetadataColumn
+                      refId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].ExternalColumns[ship_date]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="ship_date" />
+                    <externalMetadataColumn
+                      refId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].ExternalColumns[ship_mode]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="ship_mode" />
+                    <externalMetadataColumn
+                      refId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].ExternalColumns[customer_name]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="customer_name" />
+                    <externalMetadataColumn
+                      refId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].ExternalColumns[segment]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="segment" />
+                    <externalMetadataColumn
+                      refId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].ExternalColumns[state]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="state" />
+                    <externalMetadataColumn
+                      refId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].ExternalColumns[country]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="country" />
+                    <externalMetadataColumn
+                      refId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].ExternalColumns[market]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="market" />
+                    <externalMetadataColumn
+                      refId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].ExternalColumns[region]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="region" />
+                    <externalMetadataColumn
+                      refId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].ExternalColumns[product_id]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="product_id" />
+                    <externalMetadataColumn
+                      refId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].ExternalColumns[category]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="category" />
+                    <externalMetadataColumn
+                      refId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].ExternalColumns[sub_category]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="sub_category" />
+                    <externalMetadataColumn
+                      refId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].ExternalColumns[product_name]"
+                      codePage="65001"
+                      dataType="str"
+                      length="300"
+                      name="product_name" />
+                    <externalMetadataColumn
+                      refId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].ExternalColumns[sales]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="sales" />
+                    <externalMetadataColumn
+                      refId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].ExternalColumns[quantity]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="quantity" />
+                    <externalMetadataColumn
+                      refId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].ExternalColumns[discount]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="discount" />
+                    <externalMetadataColumn
+                      refId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].ExternalColumns[profit]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="profit" />
+                    <externalMetadataColumn
+                      refId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].ExternalColumns[shipping_cost]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="shipping_cost" />
+                    <externalMetadataColumn
+                      refId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].ExternalColumns[order_priority]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="order_priority" />
+                    <externalMetadataColumn
+                      refId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output].ExternalColumns[year]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="year" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="65001"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Super Store ETL Pipeline.Paths[Flat File Source Output]"
+              endId="Package\Super Store ETL Pipeline\SQL Server Staging Table.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Super Store ETL Pipeline\SuperStore CSV Data.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="194.4,41.6"
+          Id="Package\Super Store ETL Pipeline"
+          TopLeft="245.500004087176,111.794119137794" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Super Store ETL Pipeline">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="177.6,41.6"
+          Id="Package\Super Store ETL Pipeline\SuperStore CSV Data"
+          TopLeft="417.142864246758,123.88235467858" />
+        <NodeLayout
+          Size="198.4,41.6"
+          Id="Package\Super Store ETL Pipeline\SQL Server Staging Table"
+          TopLeft="412.142864161609,214.117650061743" />
+        <EdgeLayout
+          Id="Package\Super Store ETL Pipeline.Paths[Flat File Source Output]"
+          TopLeft="508.642864204183,165.48235467858">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,48.6352953831631"
+              Start="0,0"
+              End="0,41.1352953831631">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,41.1352953831631" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Super Store ETL Pipeline\SQL Server Staging Table">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

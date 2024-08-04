@@ -1,0 +1,18 @@
+USE SuperStoreDB;
+
+DROP VIEW IF EXISTS ProfitsByMarkets_V;
+
+CREATE VIEW ProfitsByMarkets_V AS
+SELECT
+	MKT.Market_Name, 
+	ROUND(SUM(FCT.[Profit]), 2) AS TOTAL_PROFIT
+FROM [dbo].[FactSales_V] AS FCT
+
+INNER JOIN [dbo].[DimMarket_V] AS MKT ON
+	MKT.MarketID = FCT.MarketID
+
+GROUP BY MKT.Market_Name;
+
+-- SELECTING FROM THE VIEW
+SELECT * FROM ProfitsByMarkets_V
+ORDER BY TOTAL_PROFIT DESC; -- 'US' MARKET HAS MADE THE HIGHEST PROFIT & 'Canada' HAS MADE THE LEAST PROFIT. 

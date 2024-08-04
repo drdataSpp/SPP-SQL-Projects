@@ -1,0 +1,24 @@
+USE SuperStoreDB;
+
+-- TOP 10 States with the Highest Number of Sales?
+
+DROP VIEW IF EXISTS Top10SalesByStates_V;
+
+CREATE VIEW Top10SalesByStates_V AS
+SELECT
+	STAT.State_Name,
+	SUM(FCT.Sales) AS TOTAL_SALES,
+	SUM(FCT.Quantity) AS TOTAL_QUANTITY
+FROM [dbo].[FactSales_V] AS FCT
+
+INNER JOIN [dbo].[DimState_V] AS STAT ON
+	STAT.StateID = FCT.StateID
+
+GROUP BY STAT.State_Name;
+
+-- SELECTING FROM THE VIEW
+SELECT TOP 10 * FROM Top10SalesByStates_V
+ORDER BY TOTAL_SALES DESC; -- 'California' MADE THE HIGHEST SALES & QUANTITY. 
+
+SELECT TOP 10 * FROM Top10SalesByStates_V
+ORDER BY TOTAL_SALES ASC; --'Matabeleland North' MADE THE LEAST SALES & QUANTITY.
